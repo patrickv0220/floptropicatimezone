@@ -8,7 +8,7 @@ function updateTimes() {
   // Format the time for GMT‑3 (São Paulo) using the IANA time zone identifier
   const gmt3Time = now.toLocaleString("en-US", {
     timeZone: "America/Sao_Paulo",
-    hour12: false, // 24-hour format; remove if you prefer 12-hour format
+    hour12: true, // 24-hour format; remove if you prefer 12-hour format
   });
 
   document.getElementById("local").innerText = "Local Time: " + localTime;
