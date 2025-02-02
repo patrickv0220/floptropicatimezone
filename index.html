@@ -1,41 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Current Time in Floptropica (CONVERTS INTO UR TIME!)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current time in Floptropica and converts to Local Time</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 20px;
+      margin: 20px;
     }
-
     h1 {
       color: #333;
     }
-
-    #gmt3-time, #local-time {
-      font-size: 36px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    #gmt3-time {
-      color: #ffe6ec7; /* A different color for GMT-3 time */
-    }
-
-    #local-time {
-      color: #000000; /* A different color for Local time */
+    #gmt3,
+    #local {
+      font-size: 24px;
+      margin: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Current Time in GMT-3 and Your Local Time</h1>
-  <div id="gmt3-time">Loading GMT-3 Time...</div>
-  <div id="local-time">Loading Local Time...</div>
+  <h1>Current Time</h1>
+  <div id="gmt3">Floptropica (AES, GMT -3): Loading...</div>
+  <div id="local">Local Time: Loading...</div>
 
-  <!-- Link to the external script.js -->
   <script src="script.js"></script>
 </body>
 </html>
