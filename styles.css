@@ -1,0 +1,55 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+#gmt3,
+#local {
+  font-size: 24px;
+  margin: 20px;
+}
+
+/* Icon Styling */
+.icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Popup Styling */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #555;
+}
