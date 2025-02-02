@@ -1,24 +1,20 @@
-function updateTime() {
-  // GMT-3 time (São Paulo)
-  const gmt3Offset = -3 * 60; // GMT-3 offset in minutes
+function updateTimes() {
+  // Get the current time as a Date object (in your local time zone)
   const now = new Date();
-  const utcTime = now.getTime() + now.getTimezoneOffset() * 60000;
-  const gmt3Time = new Date(utcTime + gmt3Offset * 60000);
 
-  // Format GMT-3 time
-  const gmt3FormattedTime = gmt3Time.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' });
+  // Format local time (this uses your system's time zone)
+  const localTime = now.toLocaleString();
 
-  // Convert GMT-3 time to local time
-  const localTime = new Date(gmt3Time.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
-  const localFormattedTime = localTime.toLocaleString();
+  // Format the time for GMT‑3 (São Paulo) using the IANA time zone identifier
+  const gmt3Time = now.toLocaleString("en-US", {
+    timeZone: "America/Sao_Paulo",
+    hour12: false, // 24-hour format; remove if you prefer 12-hour format
+  });
 
-  // Update the page with GMT-3 and local times
-  document.getElementById("gmt3-time").innerText = `GMT-3 Time: ${gmt3FormattedTime}`;
-  document.getElementById("local-time").innerText = `Local Time: ${localFormattedTime}`;
+  document.getElementById("local").innerText = "Local Time: " + localTime;
+  document.getElementById("gmt3").innerText = "GMT‑3 (São Paulo) Time: " + gmt3Time;
 }
 
-// Update time every second
-setInterval(updateTime, 1000);
-
-// Initial time display
-updateTime();
+// Update every second
+setInterval(updateTimes, 1000);
+updateTimes();
