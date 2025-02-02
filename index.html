@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Current Time in Floptropica!</title>
+  <title>Current Time in Floptropica (CONVERTS INTO UR TIME!)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,38 +15,27 @@
       color: #333;
     }
 
-    select, button {
-      padding: 10px;
-      margin: 10px;
-      font-size: 16px;
-    }
-    
-    #time {
-      font-size: 24px;
+    #gmt3-time, #local-time {
+      font-size: 36px;
       font-weight: bold;
+      color: #333;
+    }
+
+    #gmt3-time {
+      color: #ffe6ec7; /* A different color for GMT-3 time */
+    }
+
+    #local-time {
+      color: #000000; /* A different color for Local time */
     }
   </style>
 </head>
 <body>
-  <h1>Floptropica (AES) Time Zone Converter</h1>
-  
-  <!-- Display current time in GMT-3 -->
-  <div id="gmt3-time">Loading current time in GMT-3...</div>
+  <h1>Current Time in GMT-3 and Your Local Time</h1>
+  <div id="gmt3-time">Loading GMT-3 Time...</div>
+  <div id="local-time">Loading Local Time...</div>
 
-  <!-- Time Zone Selection -->
-  <label for="timezone-select">Select a time zone to convert to:</label>
-  <select id="timezone-select">
-    <option value="America/New_York">New York (Eastern Time)</option>
-    <option value="Europe/London">London</option>
-    <option value="Asia/Tokyo">Tokyo</option>
-    <option value="Australia/Sydney">Sydney</option>
-    <option value="UTC">UTC (Coordinated Universal Time)</option>
-  </select>
-  
-  <button onclick="convertTime()">Convert</button>
-
-  <div id="converted-time"></div>
-
+  <!-- Link to the external script.js -->
   <script src="script.js"></script>
 </body>
 </html>
