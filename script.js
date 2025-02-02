@@ -12,7 +12,7 @@ function updateTimes() {
   });
 
   document.getElementById("local").innerText = "Local Time: " + localTime;
-  document.getElementById("gmt3").innerText = "GMT‑3 (São Paulo) Time: " + gmt3Time;
+  document.getElementById("gmt3").innerText = "Floptropica (AES, GMT -3) Time: " + gmt3Time;
 }
 
 // Update every second
