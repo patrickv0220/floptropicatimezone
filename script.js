@@ -12,7 +12,7 @@ function getGMT3Time() {
     timeStyle: "long"
   });
 
-  document.getElementById("gmt3-time").innerText = `Current Time in GMT-3 (São Paulo): ${formattedTime}`;
+  document.getElementById("gmt3-time").innerText = `Current Time in Floptropica (AES, GMT-3): ${formattedTime}`;
 }
 
 // Function to convert GMT-3 time to selected time zone
