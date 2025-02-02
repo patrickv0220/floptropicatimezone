@@ -1,20 +1,28 @@
-function updateTimes() {
-  // Get the current time as a Date object (in your local time zone)
-  const now = new Date();
+// Display current time in GMT-3 and local time
+function updateTime() {
+  const gmt3Element = document.getElementById('gmt3');
+  const localElement = document.getElementById('local');
 
-  // Format local time (this uses your system's time zone)
-  const localTime = now.toLocaleString();
-
-  // Format the time for GMT‑3 (São Paulo) using the IANA time zone identifier
-  const gmt3Time = now.toLocaleString("en-US", {
-    timeZone: "America/Sao_Paulo",
-    hour12: true, // 24-hour format; remove if you prefer 12-hour format
+  const gmt3Time = new Date().toLocaleString('en-US', {
+    timeZone: 'America/Sao_Paulo',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
   });
 
-  document.getElementById("local").innerText = "Local Time: " + localTime;
-  document.getElementById("gmt3").innerText = "Floptropica (AES, GMT -3) Time: " + gmt3Time;
+  const localTime = new Date().toLocaleTimeString();
+
+  gmt3Element.textContent = `GMT‑3 (São Paulo): ${gmt3Time}`;
+  localElement.textContent = `Local Time: ${localTime}`;
 }
 
-// Update every second
-setInterval(updateTimes, 1000);
-updateTimes();
+setInterval(updateTime, 1000);
+
+// Popup functions
+function showPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+function hidePopup() {
+  document.getElementById("popup").style.display = "none";
+}
