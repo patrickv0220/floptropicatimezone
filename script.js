@@ -1,33 +1,21 @@
-// Function to get and display the current time in GMT-3 (São Paulo)
-function getGMT3Time() {
+function updateTime() {
+  // Current time in GMT-3 (São Paulo)
+  const gmt3Offset = -3 * 60; // GMT-3 offset in minutes
   const now = new Date();
-  const saoPauloOffset = -3 * 60; // GMT-3 offset in minutes
   const utcTime = now.getTime() + now.getTimezoneOffset() * 60000;
-  const saoPauloTime = new Date(utcTime + saoPauloOffset * 60000);
-  
-  // Format the time and display it
-  const formattedTime = saoPauloTime.toLocaleString("en-US", {
-    timeZone: "America/Sao_Paulo",
-    dateStyle: "full",
-    timeStyle: "long"
-  });
+  const gmt3Time = new Date(utcTime + gmt3Offset * 60000);
 
-  document.getElementById("gmt3-time").innerText = `Current Time in Floptropica (AES, GMT-3): ${formattedTime}`;
+  // Convert GMT-3 time to local time
+  const localTime = new Date(gmt3Time.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+
+  // Format the time and update the page
+  const formattedTime = localTime.toLocaleString();
+
+  document.getElementById("time").innerText = `Local Time: ${formattedTime}`;
 }
 
-// Function to convert GMT-3 time to selected time zone
-function convertTime() {
-  const timezone = document.getElementById("timezone-select").value;
-  const now = new Date();
+// Update time every second
+setInterval(updateTime, 1000);
 
-  const convertedTime = now.toLocaleString("en-US", {
-    timeZone: timezone,
-    dateStyle: "full",
-    timeStyle: "long"
-  });
-
-  document.getElementById("converted-time").innerText = `Converted Time in ${timezone}: ${convertedTime}`;
-}
-
-// Run the function to display GMT-3 time on page load
-getGMT3Time();
+// Initial time display
+updateTime();
