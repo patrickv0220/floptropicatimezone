@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Current time in Floptropica and converts to Local Time</title>
+  <title>Time in Floptropica! (converts to ur time!)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,16 +16,39 @@
     #gmt3,
     #local {
       font-size: 24px;
-      font-weight: bold;
       margin: 20px;
+    }
+    /* Footer Styling */
+    footer {
+      background-color: #ffffff;
+      color: black;
+      padding: 15px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+    }
+    footer a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>Current Time in Floptropica (this converts into ur time zone too!)</h1>
-  <div id="gmt3">Floptropica (AES, GMT -3): Loading...</div>
+  <h1>Current Time in Floptropica! (Converts to your time as well!)</h1>
+  <div id="gmt3">Floptropica (GMT-3, AES): Loading...</div>
   <div id="local">Local Time: Loading...</div>
 
   <script src="script.js"></script>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>FOLLOW FLOPGOV ON SOCIALS! 
+      <a href="https://link.me/flopgov" target="_blank">https://link.me/flopgov</a>
+    </p>
+  </footer>
 </body>
 </html>
