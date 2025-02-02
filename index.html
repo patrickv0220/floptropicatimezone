@@ -3,52 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Time in Floptropica! (converts to ur time!)</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-    #gmt3,
-    #local {
-      font-size: 24px;
-      margin: 20px;
-    }
-    /* Footer Styling */
-    footer {
-      background-color: #ffffff;
-      color: black;
-      padding: 15px 0;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 16px;
-    }
-    footer a {
-      color: #00bfff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <title>Time in Floptropica! (converts to ur time too!)</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Current Time in Floptropica! (Converts to your time as well!)</h1>
-  <div id="gmt3">Floptropica (GMT-3, AES): Loading...</div>
+  <h1>Current Time in Floptropica! (converts to ur time!)</h1>
+  <div id="gmt3">Floptropica (AES, GMT-3): Loading...</div>
   <div id="local">Local Time: Loading...</div>
 
   <script src="script.js"></script>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>FOLLOW FLOPGOV ON SOCIALS! 
-      <a href="https://link.me/flopgov" target="_blank">https://link.me/flopgov</a>
-    </p>
-  </footer>
+  <!-- Popup Icon -->
+  <div id="popupIcon" class="icon" onclick="showPopup()">
+    <img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" alt="Info Icon">
+  </div>
+
+    <!-- Popup Content -->
+  <div id="popup" class="popup">
+    <p>Open sourced on <a href="https://github.com/patrickv0220/floptropicatimezone" title="GitHub" target="_blank">
+      GitHub</a></p>
+    
+    <p>Developed by <a href="https://github.com/patrickv0220" title="patrickv0220" target="_blank">
+      patrickv0220</a></p>
+      
+      <p> Created for flopgov, go follow his <a href="https://link.me/flopgov" title="flopgov" target="_blank">
+      socials!</a></p>
+      
+    <p>Info icon created by<a href="https://www.flaticon.com/free-icons/info" title="info icons" target="_blank">
+      Stockio! (on Flaticon!)
+    </a></p>
+    <br><br>
+    <button onclick="hidePopup()">Close</button>
+  </div>
+  </div>
 </body>
 </html>
