@@ -1,3 +1,10 @@
-# floptropicatimezone
-Hii! This is a time zone website designed by me!
-Created for: Flopgov on Instagram!
+# Floptropica Time Zone
+
+A time zone website created for Flopgov.
+
+Unfinished.
+
+Todo list:
+
+- [] Make it more accessible
+
