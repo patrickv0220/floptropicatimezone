@@ -6,5 +6,5 @@ Unfinished.
 
 Todo list:
 
-- [] Make it more accessible
+- [ ] Make it more accessible
 
