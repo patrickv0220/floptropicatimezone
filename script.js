@@ -12,7 +12,7 @@ function updateTime() {
 
   const localTime = new Date().toLocaleTimeString();
 
-  gmt3Element.textContent = `GMT‑3 (São Paulo): ${gmt3Time}`;
+  gmt3Element.textContent = `Floptropica (AES, GMT-3): ${gmt3Time}`;
   localElement.textContent = `Local Time: ${localTime}`;
 }
 
