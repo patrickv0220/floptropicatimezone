@@ -7,7 +7,7 @@ Status: Unfinished.
 
 Todo list:
 
-- [ ] Make it more accessible
+- [x] Make it more accessible
 - [ ] Fix the issue of the info icon overlapping with the time on devices
 
-Created With Vercel and GitHub
+Created with Vercel and GitHub
