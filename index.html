@@ -3,38 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Time in Floptropica! (converts to ur time too!)</title>
+  <title>Time in Floptropica! (converts to your time!)</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Current Time in Floptropica! (converts to ur time!)</h1>
-  <div id="gmt3">Floptropica (AES, GMT-3): Loading...</div>
-  <div id="local">Local Time: Loading...</div>
+  <h1>Current Time in Floptropica!</h1>
+  <p class="subtitle">(Automatically converts to your local time too!)</p>
 
-  <script src="script.js"></script>
+  <div id="gmt3" class="time">Floptropica (AES, GMT-3): Loading...</div>
+  <div id="local" class="time">Local Time: Loading...</div>
 
-  <!-- Popup Icon -->
   <div id="popupIcon" class="icon" onclick="showPopup()">
     <img src="https://cdn-icons-png.flaticon.com/512/665/665049.png" alt="Info Icon">
   </div>
 
-    <!-- Popup Content -->
+  <div id="popupOverlay" class="overlay" onclick="hidePopup()"></div>
+
   <div id="popup" class="popup">
-    <p>Open sourced on <a href="https://github.com/patrickv0220/floptropicatimezone" title="GitHub" target="_blank">
-      GitHub</a></p>
-    
-    <p>Developed by <a href="https://github.com/patrickv0220" title="patrickv0220" target="_blank">
-      patrickv0220</a></p>
-      
-      <p> Created for flopgov, go follow his <a href="https://link.me/flopgov" title="flopgov" target="_blank">
-      socials!</a></p>
-      
-    <p>Info icon created by<a href="https://www.flaticon.com/free-icons/info" title="info icons" target="_blank">
-      Stockio! (on Flaticon!)
-    </a></p>
-    <br><br>
+    <p>Open sourced on <a href="https://github.com/patrickv0220/floptropicatimezone" target="_blank">GitHub</a></p>
+    <p>Developed by <a href="https://github.com/patrickv0220" target="_blank">patrickv0220</a></p>
+    <p>Created for flopgov — check out their <a href="https://link.me/flopgov" target="_blank">socials</a>!</p>
+    <p>Info icon by <a href="https://www.flaticon.com/free-icons/info" target="_blank">Stockio on Flaticon</a></p>
     <button onclick="hidePopup()">Close</button>
   </div>
-  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
