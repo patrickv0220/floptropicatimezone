@@ -1,4 +1,3 @@
-// Display current time in GMT-3 and local time
 function updateTime() {
   const gmt3Element = document.getElementById('gmt3');
   const localElement = document.getElementById('local');
@@ -21,8 +20,10 @@ setInterval(updateTime, 1000);
 // Popup functions
 function showPopup() {
   document.getElementById("popup").style.display = "block";
+  document.getElementById("popupOverlay").style.display = "block";
 }
 
 function hidePopup() {
   document.getElementById("popup").style.display = "none";
+  document.getElementById("popupOverlay").style.display = "none";
 }
