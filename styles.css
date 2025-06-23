@@ -1,31 +1,42 @@
 /* General Styling */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
   text-align: center;
-  margin: 20px;
+  background-color: #f8f8f8;
 }
 
 h1 {
-  color: #333;
+  color: #222;
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
 }
 
-#gmt3,
-#local {
-  font-size: 24px;
-  margin: 20px;
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.time {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #333;
 }
 
 /* Icon Styling */
 .icon {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .icon img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 /* Popup Styling */
@@ -34,22 +45,64 @@ h1 {
   position: fixed;
   top: 50%;
   left: 50%;
+  max-width: 90%;
+  width: 320px;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 20px;
+  padding: 1.5rem;
+  border-radius: 10px;
   border: 2px solid #333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1002;
+  text-align: left;
+}
+
+.popup p {
+  margin: 0.5rem 0;
+}
+
+.popup a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.popup a:hover {
+  text-decoration: underline;
 }
 
 .popup button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
   background-color: #333;
   color: white;
   border: none;
-  padding: 8px 16px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .popup button:hover {
   background-color: #555;
+}
+
+/* Dark background overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .time {
+    font-size: 1.2rem;
+  }
 }
