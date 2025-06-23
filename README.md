@@ -8,6 +8,6 @@ Status: Unfinished.
 Todo list:
 
 - [x] Make it more accessible
-- [ ] Fix the issue of the info icon overlapping with the time on devices
+- [x] Fix the issue of the info icon overlapping with the time on devices
 
 Created with Vercel and GitHub
