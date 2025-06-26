@@ -3,7 +3,7 @@ HIII! Thank you so much for trying this out! Right now its not done BUT i need y
 
 About: A time zone website created for Flopgov.
 
-Status: Unfinished.
+Status: Finished.
 
 Todo list:
 
