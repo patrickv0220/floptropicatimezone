@@ -11,3 +11,6 @@ Todo list:
 - [x] Fix the issue of the info icon overlapping with the time on devices
 
 Created with Vercel and GitHub
+
+# LICENSE
+This repository uses the [MIT License](LICENSE).
